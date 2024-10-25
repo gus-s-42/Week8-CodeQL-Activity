@@ -22,7 +22,6 @@ predicate isTest(Function test) {
 * Holds if the given function is exported from a module.
 */
 predicate isPressActionKeyPressed(Function f) {
-  exists(Module m | m.getAnExportedValue(_).getAFunctionValue().getFunction() = f) and
   f.getName() = "pressActionKey"
 }
 
