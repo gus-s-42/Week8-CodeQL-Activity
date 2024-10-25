@@ -28,8 +28,15 @@ predicate calls(Function caller, Function callee) {
   )
 }
 
-from Function test
+/**
+* Holds if function name is pressActionKey
+*/
+predicate isPressActionKey(Function f) {
+  f.getName() = "pressActionKey"
+}
+
+from Function test, Function callee
 where isTest(test) and
       calls(test,callee) and
-      callee.getName() = "pressActionKey"
+      isPressActionKey(callee)
 select test, "has pressActionKey call"
