@@ -22,7 +22,9 @@ predicate isTest(Function test) {
 * Holds if the given function is exported from a module.
 */
 predicate isPressActionKeyPressed(Function f) {
-  f.getName() = "pressActionKey"
+  exists(CallExpr pressActionKey, 
+  describe.getName() = "pressActionKey"
+  )
 }
 
 from Function test
