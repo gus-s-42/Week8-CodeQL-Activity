@@ -1,7 +1,7 @@
 /**
  * @description Finds tests with pressActionKey call
  * @kind problem
- * @id javascript/functions-transitively-called-by-tests
+ * @id javascript/tests-with-press-action-key
  * @problem.severity recommendation
  */
 import javascript
